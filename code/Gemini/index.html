@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Arduino / ESP32</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1 id="quiz-title">Qüestionari Arduino / ESP32</h1>
+            <div class="lang-selector">
+                <label for="lang-select" id="lang-label">Idioma:</label>
+                <select id="lang-select">
+                    <option value="ca" selected>Català</option>
+                    <option value="es">Castellà</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="progress-bar-container">
+            <div id="progress-bar" style="width: 0%;"></div>
+        </div>
+
+        <main id="quiz-core">
+            <div id="question-box">
+                <h2 id="question-text">Carregant pregunta...</h2>
+                <div id="options-container"></div>
+            </div>
+            <button id="btn-next" class="btn">Següent</button>
+        </main>
+
+        <section id="results-box" class="hidden">
+            <h2 id="results-title">Resultats de l'intent</h2>
+            <p id="score-text"></p>
+            <div id="feedback-list"></div>
+            <button id="btn-restart" class="btn">Torna a intentar-ho</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #00878f; /* Blau Arduino */
+    --secondary-color: #e06000; /* Taronja ESP32 */
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --success-color: #2e7d32;
+    --error-color: #c62828;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-container {
+    background: var(--card-bg);
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 1.5rem; color: var(--primary-color); margin: 0; }
+
+.progress-bar-container {
+    background: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    background: var(--primary-color);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+#question-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.option-wrapper {
+    display: block;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-wrapper:hover {
+    background: #eef7f8;
+    border-color: var(--primary-color);
+}
+
+.option-wrapper input {
+    margin-right: 12px;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    float: right;
+    transition: background 0.2s;
+}
+
+.btn:hover { background: #00666c; }
+
+.hidden { display: none !important; }
+
+/* Estils de Feedback Final */
+#score-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feedback-item {
+    border-left: 5px solid #ccc;
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.feedback-item.correct { border-color: var(--success-color); }
+.feedback-item.incorrect { border-color: var(--error-color); }
+
+.feedback-item h3 { margin: 0 0 8px 0; font-size: 1.1rem; }
+.p-status { font-weight: bold; margin: 5px 0; }
+.p-status.ok { color: var(--success-color); }
+.p-status.fail { color: var(--error-color); }
+.feedback-text { font-style: italic; color: #555; margin-top: 5px; }
+
+#btn-restart { float: none; margin-top: 20px; background: var(--secondary-color); }
+#btn-restart:hover { background: #b34d00; }
